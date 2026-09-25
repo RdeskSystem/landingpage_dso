@@ -43,7 +43,7 @@ export function ServiceCard({
         </div>
         <span className={cn("text-xs font-bold tracking-widest", dark ? "text-white/70" : "text-black/60")}>DSO</span>
       </div>
-      <h3 className={cn("display-heading mt-7 text-xl font-bold", dark ? "text-white" : "text-[var(--dso-ink)]")}>{title}</h3>
+      <h2 className={cn("display-heading mt-7 text-xl font-bold", dark ? "text-white" : "text-[var(--dso-ink)]")}>{title}</h2>
       <p className={cn("mt-3 text-sm leading-6", dark ? "text-white/55" : "text-[var(--dso-muted)]")}>{description}</p>
       <ul className={cn("mt-6 grid gap-3 border-t pt-5 text-sm", dark ? "border-white/10 text-white/65" : "border-[var(--dso-line)] text-[var(--dso-muted)]")}>
         {bullets.map((bullet) => (

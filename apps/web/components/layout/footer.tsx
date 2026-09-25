@@ -70,7 +70,7 @@ export async function Footer({ locale }: FooterProps) {
         <div className="container-shell flex flex-col gap-4 py-5 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>{t("copyright")}</p>
           <div className="flex items-center gap-5">
-            <span className="inline-flex items-center gap-2" aria-label="Website by Rulimenaproject">
+            <div className="inline-flex items-center gap-2" role="img" aria-label="Website by Rulimenaproject">
               <svg className="h-7 w-7 text-[var(--dso-red-bright)]" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                 <path d="M16 2 19.3 12.7 30 16l-10.7 3.3L16 30l-3.3-10.7L2 16l10.7-3.3L16 2Z" stroke="currentColor" strokeWidth="1.7" />
                 <circle cx="16" cy="16" r="3" fill="currentColor" />
@@ -79,7 +79,7 @@ export async function Footer({ locale }: FooterProps) {
                 <span className="text-[9px] uppercase tracking-[0.18em] text-white/50">by</span>
                 <span className="mt-1 text-[10px] font-extrabold uppercase tracking-[0.1em] text-white">Rulimenaproject</span>
               </span>
-            </span>
+            </div>
           </div>
           <div className="flex items-center gap-5">
             <Link className="hover:text-white" href={`/${locale}/privasi`}>{t("privacy")}</Link>

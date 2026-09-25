@@ -119,7 +119,7 @@ export function LeadForm({ locale, copy }: LeadFormProps) {
       </label>
       {errors.privacyAccepted ? <p className="-mt-3 text-xs text-[var(--dso-red)]">{errors.privacyAccepted.message}</p> : null}
 
-      <button type="submit" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#148a55] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#106e44] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#148a55]">
+      <button type="submit" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#117a4b] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#0f693f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#117a4b]">
         <WhatsAppIcon size={19} />
         {copy.submit}
       </button>
