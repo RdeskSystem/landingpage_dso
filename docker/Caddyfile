@@ -1,0 +1,18 @@
+web.duxorientis.com {
+  encode zstd gzip
+  handle /admin* {
+    reverse_proxy cms:3001
+  }
+  handle /api/leads {
+    reverse_proxy web:3000
+  }
+  handle /api/health {
+    reverse_proxy web:3000
+  }
+  handle /api/* {
+    reverse_proxy cms:3001
+  }
+  handle {
+    reverse_proxy web:3000
+  }
+}

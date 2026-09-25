@@ -1,0 +1,233 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "services": "Layanan",
+    "technology": "Teknologi",
+    "coverage": "Jangkauan",
+    "careers": "Karier",
+    "contact": "Kontak",
+    "insights": "Insight",
+    "request": "Request Proposal",
+    "language": "EN"
+  },
+  "common": {
+    "learnMore": "Selengkapnya",
+    "viewServices": "Lihat layanan",
+    "backHome": "Kembali ke beranda",
+    "illustration": "Ilustrasi",
+    "whatsapp": "Hubungi via WhatsApp"
+  },
+  "home": {
+    "eyebrow": "People. Process. Performance.",
+    "title": "Mitra operasional dan penagihan yang bergerak dengan kepastian.",
+    "description": "DSO memadukan SDM terlatih, proses terstruktur, dan teknologi real-time untuk komunikasi pelanggan, verifikasi data, serta pengelolaan piutang.",
+    "primaryCta": "Konsultasi gratis",
+    "secondaryCta": "Lihat layanan",
+    "heroLabel": "DSO OPERATIONS PLATFORM",
+    "heroStatus": "Monitoring operasional",
+    "heroStatusValue": "Terukur dan terkendali",
+    "heroStatOne": "Service lines",
+    "heroStatTwo": "Office locations",
+    "heroStatThree": "Bilingual",
+    "trustEyebrow": "Fondasi yang terukur",
+    "trustTitle": "Satu partner untuk pekerjaan yang membutuhkan akurasi.",
+    "trustDescription": "Dari komunikasi awal hingga laporan lapangan, setiap aktivitas dirancang agar lebih jelas, terdokumentasi, dan mudah ditindaklanjuti.",
+    "stats": {
+      "services": "Bidang layanan",
+      "locations": "Lokasi operasional",
+      "languages": "Bahasa layanan",
+      "model": "Model kerja"
+    },
+    "servicesEyebrow": "Layanan inti",
+    "servicesTitle": "Operasi yang lebih ringan. Hasil yang lebih optimal.",
+    "servicesDescription": "Layanan DSO dibangun untuk membantu tim Anda fokus pada bisnis inti tanpa kehilangan visibilitas dan kontrol.",
+    "services": {
+      "call": {
+        "title": "Call Centre",
+        "description": "Komunikasi pelanggan yang profesional, responsif, dan terdokumentasi.",
+        "bullet1": "Outbound dan inbound calling",
+        "bullet2": "Konfirmasi dan follow-up",
+        "bullet3": "Monitoring dan reporting"
+      },
+      "survey": {
+        "title": "Survey & Verification",
+        "description": "Informasi lapangan yang akurat sebagai dasar keputusan yang lebih tepat.",
+        "bullet1": "Verifikasi customer dan alamat",
+        "bullet2": "Dokumentasi foto dan lokasi",
+        "bullet3": "Laporan digital terstruktur"
+      },
+      "collection": {
+        "title": "Collection & Asset Management",
+        "description": "Penagihan dan pengelolaan aset dengan pendekatan humanis, tegas, dan sesuai regulasi.",
+        "bullet1": "Desk, field, dan hybrid collection",
+        "bullet2": "Pengawasan aset bermasalah",
+        "bullet3": "Koordinasi legal dan mediasi"
+      },
+      "data": {
+        "title": "Information & Data Services",
+        "description": "Data yang rapi dan insight yang mudah dipakai untuk kebutuhan operasional.",
+        "bullet1": "Data processing dan updating",
+        "bullet2": "Reporting dan dashboard",
+        "bullet3": "Research support"
+      }
+    },
+    "whyEyebrow": "Mengapa DSO",
+    "whyTitle": "People. Process. Performance.",
+    "whyDescription": "Tiga fondasi yang menjaga layanan tetap profesional dari awal sampai akhir.",
+    "principles": {
+      "people": {
+        "title": "People",
+        "description": "Tim terlatih yang memahami komunikasi, verifikasi, dan kebutuhan operasional klien."
+      },
+      "process": {
+        "title": "Process",
+        "description": "SOP, quality control, dan pelaporan yang membuat pekerjaan konsisten dan mudah diaudit."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Data dan monitoring yang membantu tim bergerak cepat dengan keputusan yang lebih terukur."
+      }
+    },
+    "workflowEyebrow": "Cara kerja",
+    "workflowTitle": "Dari assignment hingga follow-up, semuanya terlihat jelas.",
+    "workflow": {
+      "one": "Data & assignment",
+      "two": "Review & segmentasi",
+      "three": "Eksekusi",
+      "four": "Quality control",
+      "five": "Reporting & follow-up"
+    },
+    "technologyEyebrow": "Teknologi dan kualitas",
+    "technologyTitle": "Visibilitas real-time untuk operasi yang terus bergerak.",
+    "technologyDescription": "Platform digital mendukung GPS, form terstruktur, dokumentasi, monitoring, serta pelaporan agar setiap langkah dapat ditelusuri.",
+    "technologyLabel": "Ilustrasi platform",
+    "coverageEyebrow": "Jangkauan operasional",
+    "coverageTitle": "Pemahaman lokal. Disiplin kerja profesional.",
+    "coverageDescription": "DSO hadir untuk mendukung kebutuhan klien di wilayah strategis Indonesia dengan pendekatan yang menyesuaikan karakter operasional setempat.",
+    "coverageLink": "Lihat jangkauan",
+    "ctaEyebrow": "Mari berkolaborasi",
+    "ctaTitle": "Bersama DSO, operasi lebih ringan dan hasil lebih optimal.",
+    "ctaDescription": "Ceritakan kebutuhan operasional Anda. Tim kami siap membantu merancang pendekatan yang relevan.",
+    "ctaButton": "Request Proposal"
+  },
+  "pages": {
+    "about": {
+      "eyebrow": "Tentang DSO",
+      "title": "Teknologi memberi arah. Proses memberi konsistensi. Manusia memberi nilai.",
+      "description": "Dux Stellae Orientis berarti Pemimpin Bintang dari Timur, sebuah simbol harapan, arah, dan panduan untuk membangun layanan operasional yang profesional dan manusiawi."
+    },
+    "team": {
+      "eyebrow": "Tim kepemimpinan",
+      "title": "Pengalaman operasional yang dibangun untuk hasil nyata.",
+      "description": "Profil publik tim akan memuat jabatan dan ringkasan pengalaman profesional setelah memperoleh persetujuan publikasi."
+    },
+    "compliance": {
+      "eyebrow": "Kepatuhan",
+      "title": "Humanis dalam pendekatan, tegas dalam proses.",
+      "description": "Setiap aktivitas dijalankan sesuai SOP, regulasi yang berlaku, keamanan data, dan etika profesi."
+    },
+    "services": {
+      "eyebrow": "Layanan DSO",
+      "title": "Dukungan operasional yang dirancang sesuai kebutuhan.",
+      "description": "Jelajahi layanan Call Centre, Survey & Verification, Collection, serta Information & Data Services beserta cakupan dan proses kerjanya."
+    },
+    "call": {
+      "eyebrow": "Call Centre",
+      "title": "Komunikasi pelanggan yang terstruktur dan responsif.",
+      "description": "Outbound, inbound, konfirmasi, follow-up, reminder, monitoring, dan reporting dalam satu proses yang terdokumentasi."
+    },
+    "survey": {
+      "eyebrow": "Survey & Verification",
+      "title": "Data lapangan yang akurat untuk keputusan yang lebih baik.",
+      "description": "Verifikasi alamat, customer, bisnis, dokumen, lokasi, serta dokumentasi kunjungan melalui proses digital."
+    },
+    "collection": {
+      "eyebrow": "Collection & Asset Management",
+      "title": "Pengelolaan piutang dan aset dengan standar profesional.",
+      "description": "Desk, field, dan hybrid collection dengan pendekatan humanis, tegas, terukur, dan sesuai regulasi."
+    },
+    "data": {
+      "eyebrow": "Information & Data Services",
+      "title": "Informasi yang rapi untuk operasi yang lebih siap.",
+      "description": "Data processing, information updating, analisis, dashboard, reporting, dan dukungan riset."
+    },
+    "technology": {
+      "eyebrow": "Teknologi & kualitas",
+      "title": "Sistem terintegrasi untuk kontrol yang lebih baik.",
+      "description": "Cloud-based workflow, real-time monitoring, GPS, form digital, call recording, audit trail, dan reporting."
+    },
+    "industries": {
+      "eyebrow": "Industri",
+      "title": "Mitra operasional untuk berbagai sektor bisnis.",
+      "description": "Perbankan, pembiayaan, fintech, asuransi, e-commerce, telekomunikasi, properti, utilities, dan sektor terkait."
+    },
+    "coverage": {
+      "eyebrow": "Jangkauan",
+      "title": "Dukungan di wilayah strategis Indonesia.",
+      "description": "Peta Indonesia menampilkan area layanan DSO di Jakarta, Banten, Jawa Barat, Jawa Tengah, Jawa Timur, Yogyakarta, Bali, Lampung, dan Sulawesi."
+    },
+    "careers": {
+      "eyebrow": "Karier",
+      "title": "Berkembang bersama tim yang memberi dampak.",
+      "description": "Lowongan kerja akan ditampilkan dari CMS setelah posisi dan informasi rekrutmen tersedia."
+    },
+    "insight": {
+      "eyebrow": "Insight",
+      "title": "Perspektif tentang operasi, data, dan kepatuhan.",
+      "description": "Konten insight akan diaktifkan setelah artikel pertama tersedia dan feature flag disetujui."
+    },
+    "contact": {
+      "eyebrow": "Kontak",
+      "title": "Mari membahas kebutuhan operasional Anda.",
+      "description": "Isi form Request Proposal dan lanjutkan percakapan dengan tim DSO melalui WhatsApp."
+    },
+    "privacy": {
+      "eyebrow": "Privasi",
+      "title": "Privasi dan perlindungan data.",
+      "description": "Teks kebijakan privasi final menunggu persetujuan manajemen dan ketentuan retensi data lead."
+    },
+    "terms": {
+      "eyebrow": "Syarat",
+      "title": "Syarat penggunaan website.",
+      "description": "Teks syarat penggunaan final akan ditambahkan setelah proses review legal."
+    },
+    "notFound": {
+      "eyebrow": "Halaman belum tersedia",
+      "title": "Konten ini sedang kami siapkan.",
+      "description": "Halaman yang Anda minta belum memiliki konten publik. Kembali ke beranda untuk melanjutkan."
+    }
+  },
+  "leadForm": {
+    "infoEyebrow": "Hubungi DSO",
+    "infoTitle": "Mari mulai percakapan.",
+    "infoDescription": "Ceritakan kebutuhan Anda dan tim kami akan membantu menentukan pendekatan yang tepat.",
+    "formEyebrow": "Request Proposal",
+    "formTitle": "Bagaimana kami dapat membantu?",
+    "formDescription": "Lengkapi detail berikut. Pesan akan disiapkan untuk dikirim langsung ke WhatsApp admin DSO.",
+    "name": "Nama",
+    "company": "Perusahaan",
+    "position": "Jabatan",
+    "email": "Email",
+    "phone": "Telepon",
+    "services": "Layanan yang diminati",
+    "serviceOptions": {
+      "callCentre": "Call Centre",
+      "survey": "Survey & Verification",
+      "collection": "Collection & Asset Management",
+      "data": "Information & Data Services"
+    },
+    "message": "Pesan",
+    "privacy": "Saya menyetujui data ini diteruskan kepada tim DSO melalui WhatsApp untuk menindaklanjuti kebutuhan layanan dan proposal.",
+    "submit": "Lanjutkan melalui WhatsApp",
+    "optional": "opsional",
+    "required": "Mohon lengkapi field ini."
+  },
+  "footer": {
+    "tagline": "Mitra operasional dan penagihan yang profesional, akurat, responsif, dan terpercaya.",
+    "office": "Jakarta & Bekasi",
+    "copyright": "© 2026 PT Dux Stellae Orientis. Seluruh hak dilindungi.",
+    "privacy": "Privasi",
+    "terms": "Syarat"
+  }
+}

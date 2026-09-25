@@ -1,0 +1,231 @@
+@import "../styles/tokens.css";
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-jakarta);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--dso-paper);
+  color: var(--dso-ink);
+  font-family: var(--font-inter), Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--dso-red);
+  color: white;
+}
+
+.container-shell {
+  width: min(100% - 2rem, 1180px);
+  margin-inline: auto;
+}
+
+.display-heading {
+  font-family: var(--font-jakarta), Arial, sans-serif;
+  letter-spacing: -0.045em;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--dso-red);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  display: block;
+  width: 2px;
+  height: 1.1rem;
+  background: currentColor;
+  content: "";
+}
+
+.eyebrow-light {
+  color: #ff8e8e;
+}
+
+.starburst {
+  background-image: radial-gradient(
+      circle at 79% 25%,
+      rgba(227, 27, 35, 0.3) 0,
+      rgba(227, 27, 35, 0.08) 14%,
+      transparent 38%
+    ),
+    repeating-conic-gradient(
+      from 4deg at 79% 25%,
+      rgba(227, 27, 35, 0.16) 0deg 0.6deg,
+      transparent 0.6deg 9deg
+    );
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+  opacity: 0.8;
+}
+
+.grid-pattern {
+  background-image: linear-gradient(
+      rgba(11, 11, 13, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(11, 11, 13, 0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.04)
+  );
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.chart-bar {
+  transform-origin: bottom;
+  animation: chart-rise 850ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+  animation-delay: var(--chart-delay, 0ms);
+}
+
+.coverage-map {
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.coverage-map__art {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.coverage-map__islands path {
+  fill: rgba(255, 255, 255, 0.13);
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.coverage-map__pin {
+  color: #ff7479;
+  animation: pin-drop 500ms cubic-bezier(0.2, 0.8, 0.25, 1.2) both;
+  animation-delay: var(--pin-delay, 0ms);
+}
+
+.coverage-map__pin > path {
+  fill: currentColor;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
+.coverage-map__pin-core {
+  fill: #fff;
+}
+
+.coverage-map__pulse {
+  fill: currentColor;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pin-pulse 2.4s ease-out infinite;
+  animation-delay: calc(var(--pin-delay, 0ms) + 500ms);
+}
+
+.live-map-dot {
+  animation: status-pulse 2.2s ease-in-out infinite;
+}
+
+.coverage-map__legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem 1rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.72rem;
+  list-style: none;
+}
+
+.coverage-map__legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.coverage-map__legend li span {
+  color: #ff8e8e;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.coverage-map--compact .coverage-map__legend {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  font-size: 0.65rem;
+}
+
+@keyframes chart-rise {
+  from { transform: scaleY(0.12); opacity: 0.35; }
+  to { transform: scaleY(1); opacity: 0.85; }
+}
+
+@keyframes pin-drop {
+  from { opacity: 0; translate: 0 -12px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@keyframes pin-pulse {
+  0% { opacity: 0.5; transform: scale(0.25); }
+  85%, 100% { opacity: 0; transform: scale(1.8); }
+}
+
+@keyframes status-pulse {
+  0%, 100% { scale: 1; filter: brightness(1); }
+  50% { scale: 1.25; filter: brightness(1.35); }
+}
+
+@media (max-width: 520px) {
+  .coverage-map__legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coverage-map--compact .coverage-map__legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

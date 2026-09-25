@@ -1,0 +1,14 @@
+:root {
+  --dso-red: #c00000;
+  --dso-red-bright: #e31b23;
+  --dso-red-text: #ff5960;
+  --dso-red-deep: #8a0000;
+  --dso-ink: #0b0b0d;
+  --dso-charcoal: #1c1c20;
+  --dso-paper: #ffffff;
+  --dso-mist: #f4f4f6;
+  --dso-line: #e4e4e8;
+  --dso-muted: #5b5b66;
+  --radius-card: 16px;
+  --radius-btn: 12px;
+}

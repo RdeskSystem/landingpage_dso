@@ -1,0 +1,233 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "technology": "Technology",
+    "coverage": "Coverage",
+    "careers": "Careers",
+    "contact": "Contact",
+    "insights": "Insights",
+    "request": "Request Proposal",
+    "language": "ID"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewServices": "View services",
+    "backHome": "Back to home",
+    "illustration": "Illustration",
+    "whatsapp": "Contact via WhatsApp"
+  },
+  "home": {
+    "eyebrow": "People. Process. Performance.",
+    "title": "An operations and collection partner built for certainty.",
+    "description": "DSO combines trained people, structured processes, and real-time technology for customer communication, data verification, and receivables management.",
+    "primaryCta": "Free consultation",
+    "secondaryCta": "View services",
+    "heroLabel": "DSO OPERATIONS PLATFORM",
+    "heroStatus": "Operations monitoring",
+    "heroStatusValue": "Measured and in control",
+    "heroStatOne": "Service lines",
+    "heroStatTwo": "Office locations",
+    "heroStatThree": "Bilingual",
+    "trustEyebrow": "A measurable foundation",
+    "trustTitle": "One partner for work that demands accuracy.",
+    "trustDescription": "From the first communication to field reporting, every activity is designed to be clearer, documented, and actionable.",
+    "stats": {
+      "services": "Service areas",
+      "locations": "Operating locations",
+      "languages": "Service languages",
+      "model": "Working model"
+    },
+    "servicesEyebrow": "Core services",
+    "servicesTitle": "Lighter operations. Stronger outcomes.",
+    "servicesDescription": "DSO services help your team stay focused on the core business without losing visibility or control.",
+    "services": {
+      "call": {
+        "title": "Call Centre",
+        "description": "Professional, responsive, and documented customer communication.",
+        "bullet1": "Outbound and inbound calling",
+        "bullet2": "Confirmation and follow-up",
+        "bullet3": "Monitoring and reporting"
+      },
+      "survey": {
+        "title": "Survey & Verification",
+        "description": "Accurate field information for better-informed decisions.",
+        "bullet1": "Customer and address verification",
+        "bullet2": "Photo and location documentation",
+        "bullet3": "Structured digital reporting"
+      },
+      "collection": {
+        "title": "Collection & Asset Management",
+        "description": "Human, firm, and compliant collection and asset management.",
+        "bullet1": "Desk, field, and hybrid collection",
+        "bullet2": "Distressed asset oversight",
+        "bullet3": "Legal coordination and mediation"
+      },
+      "data": {
+        "title": "Information & Data Services",
+        "description": "Organized data and practical insight for operational needs.",
+        "bullet1": "Data processing and updating",
+        "bullet2": "Reporting and dashboards",
+        "bullet3": "Research support"
+      }
+    },
+    "whyEyebrow": "Why DSO",
+    "whyTitle": "People. Process. Performance.",
+    "whyDescription": "Three foundations that keep every service professional from start to finish.",
+    "principles": {
+      "people": {
+        "title": "People",
+        "description": "Trained teams that understand communication, verification, and client operations."
+      },
+      "process": {
+        "title": "Process",
+        "description": "SOPs, quality control, and reporting that make work consistent and auditable."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Data and monitoring that help teams move quickly with measurable decisions."
+      }
+    },
+    "workflowEyebrow": "How we work",
+    "workflowTitle": "From assignment to follow-up, every step stays visible.",
+    "workflow": {
+      "one": "Data & assignment",
+      "two": "Review & segmentation",
+      "three": "Execution",
+      "four": "Quality control",
+      "five": "Reporting & follow-up"
+    },
+    "technologyEyebrow": "Technology and quality",
+    "technologyTitle": "Real-time visibility for operations in motion.",
+    "technologyDescription": "Digital workflows support GPS, structured forms, documentation, monitoring, and reporting so every step can be traced.",
+    "technologyLabel": "Platform illustration",
+    "coverageEyebrow": "Operating coverage",
+    "coverageTitle": "Local understanding. Professional discipline.",
+    "coverageDescription": "DSO supports clients in strategic Indonesian regions with an approach shaped around local operating realities.",
+    "coverageLink": "View coverage",
+    "ctaEyebrow": "Let us collaborate",
+    "ctaTitle": "With DSO, operations feel lighter and outcomes go further.",
+    "ctaDescription": "Tell us what your operation needs. Our team is ready to shape a relevant approach.",
+    "ctaButton": "Request Proposal"
+  },
+  "pages": {
+    "about": {
+      "eyebrow": "About DSO",
+      "title": "Technology gives direction. Process creates consistency. People create value.",
+      "description": "Dux Stellae Orientis means Leader of the Stars from the East, a symbol of hope, direction, and guidance for professional and human operations."
+    },
+    "team": {
+      "eyebrow": "Leadership team",
+      "title": "Operational experience built for meaningful outcomes.",
+      "description": "Public team profiles will include roles and professional summaries after publication consent is confirmed."
+    },
+    "compliance": {
+      "eyebrow": "Compliance",
+      "title": "Human in approach, disciplined in process.",
+      "description": "Every activity follows SOPs, applicable regulations, data security requirements, and professional ethics."
+    },
+    "services": {
+      "eyebrow": "DSO services",
+      "title": "Operational support shaped around your needs.",
+      "description": "Explore Call Centre, Survey & Verification, Collection, and Information & Data Services, with their scope and working processes."
+    },
+    "call": {
+      "eyebrow": "Call Centre",
+      "title": "Structured and responsive customer communication.",
+      "description": "Outbound, inbound, confirmation, follow-up, reminders, monitoring, and reporting in one documented process."
+    },
+    "survey": {
+      "eyebrow": "Survey & Verification",
+      "title": "Accurate field data for better decisions.",
+      "description": "Verify addresses, customers, businesses, documents, and locations through a digital process."
+    },
+    "collection": {
+      "eyebrow": "Collection & Asset Management",
+      "title": "Professional receivables and asset management.",
+      "description": "Desk, field, and hybrid collection delivered with a human, firm, measurable, and compliant approach."
+    },
+    "data": {
+      "eyebrow": "Information & Data Services",
+      "title": "Organized information for operations that are ready.",
+      "description": "Data processing, information updating, analysis, dashboards, reporting, and research support."
+    },
+    "technology": {
+      "eyebrow": "Technology & quality",
+      "title": "Integrated systems for better control.",
+      "description": "Cloud workflows, real-time monitoring, GPS, digital forms, call recording, audit trails, and reporting."
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "An operations partner for businesses across sectors.",
+      "description": "Banking, finance, fintech, insurance, e-commerce, telecommunications, property, utilities, and related sectors."
+    },
+    "coverage": {
+      "eyebrow": "Coverage",
+      "title": "Support across strategic Indonesian regions.",
+      "description": "The Indonesia map marks DSO service areas in Jakarta, Banten, West Java, Central Java, East Java, Yogyakarta, Bali, Lampung, and Sulawesi."
+    },
+    "careers": {
+      "eyebrow": "Careers",
+      "title": "Grow with a team that creates impact.",
+      "description": "Open roles will be published from the CMS when recruitment information is available."
+    },
+    "insight": {
+      "eyebrow": "Insights",
+      "title": "Perspectives on operations, data, and compliance.",
+      "description": "Insights will be activated once the first articles are ready and the feature flag is approved."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Let us discuss your operational needs.",
+      "description": "Complete the Request Proposal form and continue the conversation with the DSO team on WhatsApp."
+    },
+    "privacy": {
+      "eyebrow": "Privacy",
+      "title": "Privacy and data protection.",
+      "description": "The final privacy policy awaits management approval and a confirmed lead data retention period."
+    },
+    "terms": {
+      "eyebrow": "Terms",
+      "title": "Website terms of use.",
+      "description": "The final terms of use will be added after legal review."
+    },
+    "notFound": {
+      "eyebrow": "Page in progress",
+      "title": "We are preparing this content.",
+      "description": "The requested page does not have public content yet. Return home to continue."
+    }
+  },
+  "leadForm": {
+    "infoEyebrow": "Contact DSO",
+    "infoTitle": "Let us start a conversation.",
+    "infoDescription": "Tell us what you need and our team will help shape the right approach.",
+    "formEyebrow": "Request Proposal",
+    "formTitle": "How can we help?",
+    "formDescription": "Complete the details below. Your message will be prepared for the DSO admin on WhatsApp.",
+    "name": "Name",
+    "company": "Company",
+    "position": "Position",
+    "email": "Email",
+    "phone": "Phone",
+    "services": "Services of interest",
+    "serviceOptions": {
+      "callCentre": "Call Centre",
+      "survey": "Survey & Verification",
+      "collection": "Collection & Asset Management",
+      "data": "Information & Data Services"
+    },
+    "message": "Message",
+    "privacy": "I agree to share this information with the DSO team on WhatsApp to follow up on my service and proposal needs.",
+    "submit": "Continue via WhatsApp",
+    "optional": "optional",
+    "required": "Please complete this field."
+  },
+  "footer": {
+    "tagline": "A professional, accurate, responsive, and trusted operations and collection partner.",
+    "office": "Jakarta & Bekasi",
+    "copyright": "© 2026 PT Dux Stellae Orientis. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}

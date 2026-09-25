@@ -1,0 +1,14 @@
+node_modules
+**/node_modules
+.next
+**/.next
+out
+**/out
+dist
+**/dist
+build
+**/build
+.git
+.env
+media
+apps/cms/generated-types.ts

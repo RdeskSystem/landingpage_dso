@@ -1,0 +1,23 @@
+import { getTranslations } from "next-intl/server";
+import { LegalNotice } from "@/components/legal-notice";
+import { PageHero } from "@/components/page-hero";
+import { routing, type Locale } from "@/i18n/routing";
+
+type TermsPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export default async function TermsPage({ params }: TermsPageProps) {
+  const { locale } = await params;
+  const typedLocale = getLocale(locale);
+  const t = await getTranslations({ locale: typedLocale, namespace: "pages.terms" });
+
+  return (
+    <main id="main-content">
+      <PageHero eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
+      <LegalNotice locale={typedLocale} kind="terms" />
+    </main>
+  );
+}
+
+function getLocale(locale: string): Locale {
+  return (routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale) as Locale;
+}

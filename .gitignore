@@ -1,0 +1,23 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+coverage/
+
+.env
+.env.*
+!.env.example
+
+*.log
+*.tsbuildinfo
+
+media/
+apps/cms/media/
+apps/cms/generated-types.ts
+
+# Confidential source material; never publish these files to the public repo.
+doc_pt.zip
+docs/Company Profile PT Dux Stellae Orientis - General.md
+docs/Company Profile PT Dux Stellae Orientis - Call Centre & Surveyor.md

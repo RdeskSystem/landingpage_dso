@@ -1,0 +1,25 @@
+{
+  "name": "dso-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PT Dux Stellae Orientis company profile website",
+  "workspaces": [
+    "apps/web",
+    "apps/cms"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@dso/web",
+    "dev:web": "npm run dev --workspace=@dso/web",
+    "dev:cms": "npm run dev --workspace=@dso/cms",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "format": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
