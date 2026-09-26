@@ -3,8 +3,8 @@
 Dokumen kerja untuk memulai dan melacak pembangunan website company profile PT Dux Stellae Orientis (DSO). Gunakan bersama `docs/DSO Company Profile Website - Blueprint.md`.
 
 **Tanggal pembaruan:** 2026-09-26
-**Status proyek:** Production native online; WhatsApp form, Indonesia coverage map, and Services catalog implemented; admin asset routing deployment in progress
-**Fase aktif:** Fase 4 - Browser QA and release
+**Status proyek:** Production online; admin login assets fixed, WhatsApp form, Services catalog, and Indonesia coverage maps deployed
+**Fase aktif:** Fase 4 - Final content review and optional integrations
 
 ## 1. Baseline Proyek
 
@@ -126,12 +126,13 @@ SHOW_INSIGHT=false
 - [x] Tambahkan metadata, OG image, canonical, `hreflang`, sitemap dinamis, dan robots.
 - [x] Tambahkan webhook CMS terautentikasi untuk revalidate ISR; endpoint dan hook CMS sudah smoke-tested.
 - [x] Pastikan semua feature flag memiliki default aman.
+- [ ] Email adapter Payload untuk email reset password belum dikonfigurasi; form Request Proposal tidak memerlukan email.
 
 ### Fase 4 - QA dan Launch
 
-- [ ] Uji viewport 360, 768, 1024, dan 1440 pixel.
-- [ ] Uji keyboard navigation, visible focus, screen reader semantics, alt text, dan skip link.
-- [ ] Uji validasi form dan konfirmasi draft pesan WhatsApp ID/EN di perangkat mobile dan desktop.
+- [x] Uji homepage dan Coverage pada viewport 360, 768, 1024, dan 1440 pixel; tidak ada horizontal overflow.
+- [ ] Uji keyboard navigation dan visible focus; audit axe homepage, Services, Coverage, dan Contact menunjukkan 0 violation (kontras pada gradient masih `incomplete`).
+- [x] Uji validasi form dan draft WhatsApp ID dengan data QA; link mengarah ke nomor admin beserta isi form, pesan tidak dikirim.
 - [ ] Uji access control Payload untuk publik, editor, sales, dan admin.
 - [x] Tambahkan CSP, HSTS, X-Frame-Options, Referrer-Policy, dan Permissions-Policy.
 - [x] Jalankan lint, typecheck, dan build.
@@ -144,23 +145,23 @@ SHOW_INSIGHT=false
 
 Semua route publik memakai prefix locale:
 
-- [ ] `/{locale}` - Beranda
+- [x] `/{locale}` - Beranda
 - [ ] `/{locale}/tentang`
 - [ ] `/{locale}/tentang/tim`
 - [ ] `/{locale}/tentang/kepatuhan`
 - [x] `/{locale}/layanan`
-- [ ] `/{locale}/layanan/call-centre`
-- [ ] `/{locale}/layanan/survey-verification`
-- [ ] `/{locale}/layanan/collection`
-- [ ] `/{locale}/layanan/information-data`
+- [x] `/{locale}/layanan/call-centre`
+- [x] `/{locale}/layanan/survey-verification`
+- [x] `/{locale}/layanan/collection`
+- [x] `/{locale}/layanan/information-data`
 - [ ] `/{locale}/teknologi`
-- [ ] `/{locale}/industri`
+- [x] `/{locale}/industri`
 - [x] `/{locale}/jangkauan`
 - [ ] `/{locale}/karier`
 - [ ] `/{locale}/karier/[slug]`
 - [ ] `/{locale}/insight`
 - [ ] `/{locale}/insight/[slug]`
-- [ ] `/{locale}/kontak`
+- [x] `/{locale}/kontak`
 - [ ] `/{locale}/privasi`
 - [ ] `/{locale}/syarat`
 - [ ] `/sitemap.xml`, `/robots.txt`, halaman 404, dan halaman 500 bermerek
@@ -214,9 +215,9 @@ Jangan memasukkan secret, kredensial database/Payload, atau data pribadi ke repo
 
 Urutan pekerjaan berikutnya:
 
-1. Buat admin pertama dengan email/password yang disetujui, lalu uji access control tiap role.
-2. Verifikasi white screen CMS sudah selesai setelah aset JavaScript/CSS diarahkan ke upstream CMS; uji login admin di browser.
-3. Uji Request Proposal WhatsApp, peta jangkauan, data Services, Lighthouse, aksesibilitas, broken links, dan backup/restore.
+1. Login admin di browser dengan akun yang telah dibuat dan uji access control tiap role.
+2. Isi `NEXT_PUBLIC_ANALYTICS_ID` hanya jika domain Plausible disetujui; tidak ada key yang diperlukan untuk form WhatsApp.
+3. Selesaikan keyboard QA, Lighthouse, broken links, serta backup/restore di staging.
 4. Deploy staging dan validasi rollback sebelum perubahan production berikutnya.
 
 ## 12. Bootstrap Verification
@@ -229,7 +230,7 @@ Urutan pekerjaan berikutnya:
 - [x] Production runtime: web/CMS native via PM2 + Nginx/HTTPS; PostgreSQL masih Docker dan healthy.
 - [x] Seed production: 4 services, 8 industries, 9 coverage entries; localized id/en values and nested arrays verified.
 - [x] Baseline migration diuji pada PostgreSQL sementara; schema cocok dengan production dan `payload migrate:status` menampilkan `Yes`.
-- [ ] Akun admin sudah dibuat; uji login browser menunggu perbaikan aset CMS Nginx.
+- [x] Akun admin sudah dibuat; white screen diperbaiki, aset CMS merespons `200`, dan form login tampil di browser.
 - [x] Payload REST, health, route layanan ID/EN, dan database persistence berhasil di-smoke-test.
 - [x] Production smoke test: root redirect, route ID/EN, health, sitemap, robots, and CMS APIs respond successfully.
 - [x] `/api/revalidate`: unauthenticated request returns `401`, configured Bearer secret returns `200`.
