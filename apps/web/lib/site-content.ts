@@ -56,13 +56,13 @@ export const industries = [
 export const ADMIN_WHATSAPP_NUMBER = "62818801120";
 
 export const coverageLocations = [
-  { id: "DKI Jakarta", en: "Jakarta", x: 378, y: 350 },
-  { id: "Banten", en: "Banten", x: 356, y: 350 },
-  { id: "Jawa Barat", en: "West Java", x: 400, y: 362 },
-  { id: "Jawa Tengah", en: "Central Java", x: 438, y: 365 },
-  { id: "Jawa Timur", en: "East Java", x: 478, y: 369 },
-  { id: "Yogyakarta", en: "Yogyakarta", x: 444, y: 376 },
-  { id: "Bali", en: "Bali", x: 535, y: 376 },
-  { id: "Lampung", en: "Lampung", x: 305, y: 328 },
-  { id: "Sulawesi", en: "Sulawesi", x: 705, y: 294 },
+  { id: "DKI Jakarta", en: "Jakarta", x: 493, y: 530 },
+  { id: "Banten", en: "Banten", x: 465, y: 527 },
+  { id: "Jawa Barat", en: "West Java", x: 523, y: 559 },
+  { id: "Jawa Tengah", en: "Central Java", x: 635, y: 562 },
+  { id: "Jawa Timur", en: "East Java", x: 728, y: 573 },
+  { id: "Yogyakarta", en: "Yogyakarta", x: 633, y: 596 },
+  { id: "Bali", en: "Bali", x: 826, y: 621 },
+  { id: "Lampung", en: "Lampung", x: 429, y: 497 },
+  { id: "Sulawesi", en: "Sulawesi", x: 996, y: 485 },
 ] as const;

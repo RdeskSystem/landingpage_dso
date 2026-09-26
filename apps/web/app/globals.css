@@ -134,11 +134,8 @@ a {
   overflow: visible;
 }
 
-.coverage-map__islands path {
-  fill: rgba(255, 255, 255, 0.13);
-  stroke: rgba(255, 255, 255, 0.3);
-  stroke-width: 2;
-  stroke-linejoin: round;
+.coverage-map__base {
+  pointer-events: none;
 }
 
 .coverage-map__pin {

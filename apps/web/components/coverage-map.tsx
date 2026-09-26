@@ -11,25 +11,24 @@ export function CoverageMap({ locale, compact = false }: CoverageMapProps) {
 
   return (
     <div className={compact ? "coverage-map coverage-map--compact" : "coverage-map"}>
-      <svg className="coverage-map__art" viewBox="0 0 1000 440" role="img" aria-label={title}>
-        <g className="coverage-map__islands" aria-hidden="true">
-          <path d="M145 115 198 128 239 160 268 190 280 223 264 249 281 274 267 302 244 324 214 326 190 309 171 283 151 256 132 221 118 187 125 152Z" />
-          <path d="m329 343 39-8 36 7 38-3 43 10 40 4-12 15-49 5-52-6-46 1-36-9Z" />
-          <path d="m439 130 34-24 58-8 57 16 45 40-8 49-34 39-15 50-43 25-43-20-21-40-42-34-15-47Z" />
-          <path d="m666 200 30-24 21 13 18-29 17 14-8 35 22 16-27 20-18 44-20 16-16-29-27-8-20-32 17-23Z" />
-          <path d="m801 214 56-15 63 10 41 24-24 30-63 2-42 18-38-18Z" />
-          <path d="m565 362 17-7 13 5-7 9-17 2Z" />
-          <path d="m604 367 21-6 15 6-8 8-24 1Z" />
-          <path d="m649 374 21-5 18 7-12 7-22-2Z" />
-          <path d="m706 323 22-13 19 11-7 13-22-3Z" />
-          <path d="m744 342 17-7 17 6-9 10-18 1Z" />
-        </g>
+      <svg className="coverage-map__art" viewBox="0 0 1875 750" role="img" aria-label={title}>
+        {/* Wikimedia Commons Indonesia Blankmap.svg, CC0 1.0 public-domain dedication. */}
+        <image
+          className="coverage-map__base"
+          href="/maps/indonesia-blank.svg"
+          x="0"
+          y="0"
+          width="1875"
+          height="750"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        />
         <g className="coverage-map__pins">
           {coverageLocations.map((location, index) => (
             <g
               key={location.id}
               className="coverage-map__pin"
-              transform={`translate(${location.x} ${location.y})`}
+              transform={`translate(${location.x} ${location.y}) scale(1.8)`}
               style={{ "--pin-delay": `${index * 110}ms` } as React.CSSProperties}
             >
               <title>{localize(location, locale)}</title>
