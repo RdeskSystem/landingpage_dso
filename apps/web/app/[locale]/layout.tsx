@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Analytics } from "@/components/analytics";
 import { NextIntlClientProvider } from "next-intl";
 import { routing, type Locale } from "@/i18n/routing";
+import { buildPageMetadata, seoCopy } from "@/lib/seo";
 import "../globals.css";
 
 const inter = Inter({
@@ -21,36 +22,6 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://web.duxorientis.com"),
-  title: {
-    default: "DSO | People. Process. Performance.",
-    template: "%s | DSO",
-  },
-  description:
-    "Mitra operasional dan penagihan yang profesional, akurat, responsif, dan terpercaya.",
-  alternates: {
-    canonical: "https://web.duxorientis.com",
-    languages: {
-      id: "https://web.duxorientis.com/id",
-      en: "https://web.duxorientis.com/en",
-    },
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-  openGraph: {
-    type: "website",
-    siteName: "Dux Stellae Orientis",
-    url: "https://web.duxorientis.com",
-    title: "DSO | People. Process. Performance.",
-    description:
-      "Mitra operasional dan penagihan untuk bisnis yang ingin bergerak lebih terukur.",
-    images: [{ url: "/brand/logo.png", width: 574, height: 534 }],
-  },
-};
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -59,6 +30,20 @@ type LocaleLayoutProps = Readonly<{
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>;
+
+export async function generateMetadata({ params }: Pick<LocaleLayoutProps, "params">): Promise<Metadata> {
+  const { locale: requestedLocale } = await params;
+  const locale = routing.locales.includes(requestedLocale as Locale)
+    ? (requestedLocale as Locale)
+    : routing.defaultLocale;
+  const home = seoCopy[locale].home;
+
+  return {
+    ...buildPageMetadata(locale, "", home.title, home.description, home.keywords),
+    title: { default: home.title, template: "%s | DSO" },
+    icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
+  };
+}
 
 export default async function LocaleLayout({
   children,

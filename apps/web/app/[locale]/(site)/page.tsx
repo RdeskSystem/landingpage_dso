@@ -18,11 +18,18 @@ import { SectionHeader } from "@/components/section-header";
 import { ServiceCard } from "@/components/service-card";
 import { buttonVariants } from "@/components/ui/button";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 type HomePageProps = Readonly<{
   params: Promise<{ locale: string }>;
 }>;
+
+export async function generateMetadata({ params }: HomePageProps) {
+  const { locale } = await params;
+  const typedLocale = (routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale) as Locale;
+  return getPageMetadata(typedLocale, "", "home");
+}
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;

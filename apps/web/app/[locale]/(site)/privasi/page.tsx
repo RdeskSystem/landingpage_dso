@@ -2,8 +2,14 @@ import { getTranslations } from "next-intl/server";
 import { LegalNotice } from "@/components/legal-notice";
 import { PageHero } from "@/components/page-hero";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 
 type LegalPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: LegalPageProps) {
+  const { locale } = await params;
+  return getPageMetadata(getLocale(locale), "privasi", "privacy");
+}
 
 export default async function PrivacyPage({ params }: LegalPageProps) {
   const { locale } = await params;

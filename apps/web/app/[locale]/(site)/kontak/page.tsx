@@ -3,10 +3,17 @@ import { getTranslations } from "next-intl/server";
 import { LeadForm } from "@/components/forms/lead-form";
 import { SectionHeader } from "@/components/section-header";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 
 type ContactPageProps = Readonly<{
   params: Promise<{ locale: string }>;
 }>;
+
+export async function generateMetadata({ params }: ContactPageProps) {
+  const { locale } = await params;
+  const typedLocale = (routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale) as Locale;
+  return getPageMetadata(typedLocale, "kontak", "contact");
+}
 
 export default async function ContactPage({ params }: ContactPageProps) {
   const { locale } = await params;

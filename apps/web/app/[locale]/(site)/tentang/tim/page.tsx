@@ -4,8 +4,14 @@ import { PageHero } from "@/components/page-hero";
 import { SectionHeader } from "@/components/section-header";
 import { routing, type Locale } from "@/i18n/routing";
 import { localize, teamRoles } from "@/lib/site-content";
+import { getPageMetadata } from "@/lib/seo";
 
 type TeamPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: TeamPageProps) {
+  const { locale } = await params;
+  return getPageMetadata(getLocale(locale), "tentang/tim", "team");
+}
 
 export default async function TeamPage({ params }: TeamPageProps) {
   const { locale } = await params;

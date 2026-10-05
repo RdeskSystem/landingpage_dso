@@ -4,8 +4,15 @@ import { PageHero } from "@/components/page-hero";
 import { CoverageMap } from "@/components/coverage-map";
 import { SectionHeader } from "@/components/section-header";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 
 type CoveragePageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: CoveragePageProps) {
+  const { locale } = await params;
+  const typedLocale = getLocale(locale);
+  return getPageMetadata(typedLocale, "jangkauan", "coverage");
+}
 
 export default async function CoveragePage({ params }: CoveragePageProps) {
   const { locale } = await params;

@@ -4,8 +4,14 @@ import { getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeader } from "@/components/section-header";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 
 type CareersPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: CareersPageProps) {
+  const { locale } = await params;
+  return getPageMetadata(getLocale(locale), "karier", "careers");
+}
 
 export default async function CareersPage({ params }: CareersPageProps) {
   const { locale } = await params;

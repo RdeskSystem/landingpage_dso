@@ -5,8 +5,15 @@ import { PageHero } from "@/components/page-hero";
 import { SectionHeader } from "@/components/section-header";
 import { routing, type Locale } from "@/i18n/routing";
 import { localize, industries } from "@/lib/site-content";
+import { getPageMetadata } from "@/lib/seo";
 
 type IndustriesPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: IndustriesPageProps) {
+  const { locale } = await params;
+  const typedLocale = getLocale(locale);
+  return getPageMetadata(typedLocale, "industri", "industries");
+}
 
 export default async function IndustriesPage({ params }: IndustriesPageProps) {
   const { locale } = await params;

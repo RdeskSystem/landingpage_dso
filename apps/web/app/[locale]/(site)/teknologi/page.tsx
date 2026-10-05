@@ -3,8 +3,15 @@ import { getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeader } from "@/components/section-header";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 
 type TechnologyPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: TechnologyPageProps) {
+  const { locale } = await params;
+  const typedLocale = getLocale(locale);
+  return getPageMetadata(typedLocale, "teknologi", "technology");
+}
 
 export default async function TechnologyPage({ params }: TechnologyPageProps) {
   const { locale } = await params;

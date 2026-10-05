@@ -2,8 +2,14 @@ import { getTranslations } from "next-intl/server";
 import { LegalNotice } from "@/components/legal-notice";
 import { PageHero } from "@/components/page-hero";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 
 type TermsPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: TermsPageProps) {
+  const { locale } = await params;
+  return getPageMetadata(getLocale(locale), "syarat", "terms");
+}
 
 export default async function TermsPage({ params }: TermsPageProps) {
   const { locale } = await params;

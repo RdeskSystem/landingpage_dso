@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { buttonVariants } from "@/components/ui/button";
 import { routing, type Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+import { getPageMetadata, type SeoPageKey } from "@/lib/seo";
 
 const staticRoutes = [
   ["tentang"],
@@ -35,6 +36,23 @@ type PlaceholderPageProps = Readonly<{
 }>;
 
 type PageCopy = Readonly<{ eyebrow: string; title: string; description: string }>;
+type PageKey = Exclude<SeoPageKey, "home"> | "call" | "survey" | "collection" | "data";
+
+export async function generateMetadata({ params }: PlaceholderPageProps) {
+  const { locale, slug } = await params;
+  const typedLocale = (routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale) as Locale;
+  const key = getPageKey(slug);
+  if (key === "notFound") {
+    return {
+      title: typedLocale === "id" ? "Halaman tidak ditemukan" : "Page not found",
+      robots: { index: false, follow: false },
+    };
+  }
+  const seoKey = key === "call" || key === "survey" || key === "collection" || key === "data"
+    ? "services"
+    : key;
+  return getPageMetadata(typedLocale, slug.join("/"), seoKey);
+}
 
 export default async function PlaceholderPage({ params }: PlaceholderPageProps) {
   const { locale, slug } = await params;
@@ -98,7 +116,7 @@ export default async function PlaceholderPage({ params }: PlaceholderPageProps) 
   );
 }
 
-function getPageKey(slug: string[]) {
+function getPageKey(slug: string[]): PageKey | "notFound" {
   const path = slug.join("/");
   if (path.startsWith("tentang/tim")) return "team";
   if (path.startsWith("tentang/kepatuhan")) return "compliance";

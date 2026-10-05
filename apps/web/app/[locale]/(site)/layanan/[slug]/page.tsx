@@ -6,6 +6,7 @@ import { getServiceBySlug } from "@/lib/cms";
 import { routing, type Locale } from "@/i18n/routing";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { buildPageMetadata } from "@/lib/seo";
 
 type ServicePageProps = Readonly<{
   params: Promise<{ locale: string; slug: string }>;
@@ -15,10 +16,17 @@ export async function generateMetadata({ params }: ServicePageProps) {
   const { locale, slug } = await params;
   const typedLocale = getLocale(locale);
   const service = await getServiceBySlug(slug, typedLocale);
+  if (!service) return { title: typedLocale === "id" ? "Layanan tidak ditemukan" : "Service not found", robots: { index: false, follow: false } };
 
-  return service
-    ? { title: service.title, description: service.summary }
-    : { title: "Layanan DSO" };
+  const keywords = getServiceKeywords(slug, typedLocale);
+  const title = typedLocale === "id"
+    ? `${service.title} untuk Bisnis Indonesia`
+    : `${service.title} Services in Indonesia`;
+  const description = typedLocale === "id"
+    ? `${service.summary} Didukung proses kerja terstruktur, quality control, dan pelaporan.`
+    : `${service.summary} Delivered through structured processes, quality control, and reporting.`;
+
+  return buildPageMetadata(typedLocale, `layanan/${slug}`, title, description, keywords);
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
@@ -135,4 +143,26 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
 function getLocale(locale: string): Locale {
   return (routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale) as Locale;
+}
+
+function getServiceKeywords(slug: string, locale: Locale) {
+  const keywords: Record<string, Record<Locale, string[]>> = {
+    "call-centre": {
+      id: ["jasa call centre Indonesia", "inbound outbound call centre", "layanan komunikasi pelanggan"],
+      en: ["call centre services Indonesia", "inbound outbound calling", "customer communication services"],
+    },
+    "survey-verification": {
+      id: ["survey lapangan Indonesia", "verifikasi alamat dan customer", "field verification"],
+      en: ["field survey Indonesia", "customer and address verification", "field verification services"],
+    },
+    collection: {
+      id: ["jasa collection Indonesia", "pengelolaan piutang", "collection dan asset management"],
+      en: ["collection services Indonesia", "receivables management", "collection and asset management"],
+    },
+    "information-data": {
+      id: ["pengolahan data operasional", "layanan information data", "dashboard dan reporting"],
+      en: ["operational data services", "information and data services", "business reporting"],
+    },
+  };
+  return keywords[slug]?.[locale] ?? [];
 }

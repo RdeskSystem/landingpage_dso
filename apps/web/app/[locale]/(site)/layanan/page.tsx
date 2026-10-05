@@ -4,6 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import { ServiceCard } from "@/components/service-card";
 import { routing, type Locale } from "@/i18n/routing";
 import { getServices } from "@/lib/cms";
+import { getPageMetadata } from "@/lib/seo";
 
 const serviceIcons: Record<string, LucideIcon> = {
   "call-centre": Headphones,
@@ -13,6 +14,12 @@ const serviceIcons: Record<string, LucideIcon> = {
 };
 
 type ServicesPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: ServicesPageProps) {
+  const { locale } = await params;
+  const typedLocale = (routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale) as Locale;
+  return getPageMetadata(typedLocale, "layanan", "services");
+}
 
 export default async function ServicesPage({ params }: ServicesPageProps) {
   const { locale } = await params;

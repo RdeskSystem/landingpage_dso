@@ -1,34 +1,38 @@
 import type { MetadataRoute } from "next";
+import { localizedUrl } from "@/lib/seo";
 
-const siteUrl = "https://web.duxorientis.com";
+const locales = ["id", "en"] as const;
 const paths = [
-  "",
-  "/tentang",
-  "/tentang/tim",
-  "/tentang/kepatuhan",
-  "/layanan",
-  "/layanan/call-centre",
-  "/layanan/survey-verification",
-  "/layanan/collection",
-  "/layanan/information-data",
-  "/teknologi",
-  "/industri",
-  "/jangkauan",
-  "/karier",
-  "/insight",
-  "/kontak",
-  "/privasi",
-  "/syarat",
+  { path: "", priority: 1, changeFrequency: "weekly" as const },
+  { path: "tentang", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "tentang/tim", priority: 0.5, changeFrequency: "monthly" as const },
+  { path: "tentang/kepatuhan", priority: 0.5, changeFrequency: "monthly" as const },
+  { path: "layanan", priority: 0.9, changeFrequency: "monthly" as const },
+  { path: "layanan/call-centre", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "layanan/survey-verification", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "layanan/collection", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "layanan/information-data", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "teknologi", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "industri", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "jangkauan", priority: 0.7, changeFrequency: "monthly" as const },
+  { path: "kontak", priority: 0.6, changeFrequency: "monthly" as const },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    ...["id", "en"].flatMap((locale) =>
-      paths.map((path) => ({
-        url: `${siteUrl}/${locale}${path}`,
+    ...locales.flatMap((locale) =>
+      paths.map(({ path, priority, changeFrequency }) => ({
+        url: localizedUrl(locale, path),
         lastModified: new Date(),
-        changeFrequency: "monthly" as const,
-        priority: path === "" ? 1 : 0.7,
+        changeFrequency,
+        priority,
+        alternates: {
+          languages: {
+            id: localizedUrl("id", path),
+            en: localizedUrl("en", path),
+            "x-default": localizedUrl("id", path),
+          },
+        },
       })),
     ),
   ];

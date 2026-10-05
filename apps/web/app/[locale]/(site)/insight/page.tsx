@@ -2,8 +2,14 @@ import { BookOpenText, LockKeyhole } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/page-hero";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 
 type InsightPageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: InsightPageProps) {
+  const { locale } = await params;
+  return getPageMetadata(getLocale(locale), "insight", "insight");
+}
 
 export default async function InsightPage({ params }: InsightPageProps) {
   const { locale } = await params;

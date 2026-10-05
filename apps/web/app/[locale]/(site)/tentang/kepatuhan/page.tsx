@@ -3,8 +3,14 @@ import { getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeader } from "@/components/section-header";
 import { routing, type Locale } from "@/i18n/routing";
+import { getPageMetadata } from "@/lib/seo";
 
 type CompliancePageProps = Readonly<{ params: Promise<{ locale: string }> }>;
+
+export async function generateMetadata({ params }: CompliancePageProps) {
+  const { locale } = await params;
+  return getPageMetadata(getLocale(locale), "tentang/kepatuhan", "compliance");
+}
 
 export default async function CompliancePage({ params }: CompliancePageProps) {
   const { locale } = await params;
