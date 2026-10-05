@@ -71,15 +71,18 @@ export const seoCopy = {
     },
     privacy: {
       title: "Kebijakan Privasi DSO",
-      description: "Informasi privasi dan penggunaan data pada website PT Dux Stellae Orientis.",
-      keywords: ["kebijakan privasi DSO", "privasi data"],
-      index: false,
+      description: "Pelajari penggunaan data pada website, form WhatsApp, dan Web SFTP PT Dux Stellae Orientis.",
+      keywords: ["kebijakan privasi DSO", "privasi data", "perlindungan data Indonesia"],
     },
     terms: {
       title: "Syarat Penggunaan Website DSO",
-      description: "Syarat penggunaan website PT Dux Stellae Orientis.",
-      keywords: ["syarat penggunaan DSO", "ketentuan website"],
-      index: false,
+      description: "Ketentuan penggunaan website, layanan proposal, dan Web SFTP PT Dux Stellae Orientis.",
+      keywords: ["syarat penggunaan DSO", "ketentuan website", "ketentuan layanan SFTP"],
+    },
+    cookies: {
+      title: "Kebijakan Cookie DSO",
+      description: "Informasi tentang cookie bahasa, sesi login Web SFTP, dan analitik pada layanan DSO.",
+      keywords: ["kebijakan cookie DSO", "cookie website", "cookie sesi login"],
     },
   },
   en: {
@@ -142,15 +145,18 @@ export const seoCopy = {
     },
     privacy: {
       title: "DSO Privacy Policy",
-      description: "Privacy and data use information for the PT Dux Stellae Orientis website.",
-      keywords: ["DSO privacy policy", "data privacy"],
-      index: false,
+      description: "Learn how data is used on the PT Dux Stellae Orientis website, WhatsApp form, and Web SFTP service.",
+      keywords: ["DSO privacy policy", "data privacy", "Indonesia data protection"],
     },
     terms: {
       title: "DSO Website Terms of Use",
-      description: "Terms of use for the PT Dux Stellae Orientis website.",
-      keywords: ["DSO terms of use", "website terms"],
-      index: false,
+      description: "Terms for the PT Dux Stellae Orientis website, proposal service, and Web SFTP service.",
+      keywords: ["DSO terms of use", "website terms", "SFTP service terms"],
+    },
+    cookies: {
+      title: "DSO Cookie Policy",
+      description: "Details about language, Web SFTP login-session, and analytics cookies used by DSO services.",
+      keywords: ["DSO cookie policy", "website cookies", "login session cookies"],
     },
   },
 } as const satisfies Record<Locale, Record<string, SeoCopy>>;

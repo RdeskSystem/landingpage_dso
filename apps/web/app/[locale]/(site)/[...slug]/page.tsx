@@ -76,6 +76,7 @@ export default async function PlaceholderPage({ params }: PlaceholderPageProps) 
     contact: ["contact.eyebrow", "contact.title", "contact.description"],
     privacy: ["privacy.eyebrow", "privacy.title", "privacy.description"],
     terms: ["terms.eyebrow", "terms.title", "terms.description"],
+    cookies: ["cookies.eyebrow", "cookies.title", "cookies.description"],
     notFound: ["notFound.eyebrow", "notFound.title", "notFound.description"],
   } as const;
   const selected = copyKeys[key];
@@ -134,5 +135,6 @@ function getPageKey(slug: string[]): PageKey | "notFound" {
   if (path === "kontak") return "contact";
   if (path === "privasi") return "privacy";
   if (path === "syarat") return "terms";
+  if (path === "cookies") return "cookies";
   return "notFound";
 }

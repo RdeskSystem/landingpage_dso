@@ -185,12 +185,17 @@
     "privacy": {
       "eyebrow": "Privasi",
       "title": "Privasi dan perlindungan data.",
-      "description": "Teks kebijakan privasi final menunggu persetujuan manajemen dan ketentuan retensi data lead."
+      "description": "Pelajari data yang diproses melalui website, form Request Proposal WhatsApp, dan layanan Web SFTP DSO."
     },
     "terms": {
       "eyebrow": "Syarat",
       "title": "Syarat penggunaan website.",
-      "description": "Teks syarat penggunaan final akan ditambahkan setelah proses review legal."
+      "description": "Ketentuan penggunaan website, form Request Proposal, dan layanan Web SFTP PT Dux Stellae Orientis."
+    },
+    "cookies": {
+      "eyebrow": "Cookie",
+      "title": "Kebijakan Cookie.",
+      "description": "Informasi cookie bahasa, sesi login Web SFTP, dan analitik yang digunakan pada layanan DSO."
     },
     "notFound": {
       "eyebrow": "Halaman belum tersedia",
@@ -228,6 +233,7 @@
     "office": "Jakarta & Bekasi",
     "copyright": "© 2026 PT Dux Stellae Orientis. Seluruh hak dilindungi.",
     "privacy": "Privasi",
-    "terms": "Syarat"
+    "terms": "Syarat",
+    "cookies": "Kebijakan Cookie"
   }
 }

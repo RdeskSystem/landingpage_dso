@@ -16,6 +16,9 @@ const paths = [
   { path: "industri", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "jangkauan", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "kontak", priority: 0.6, changeFrequency: "monthly" as const },
+  { path: "privasi", priority: 0.2, changeFrequency: "yearly" as const },
+  { path: "syarat", priority: 0.2, changeFrequency: "yearly" as const },
+  { path: "cookies", priority: 0.2, changeFrequency: "yearly" as const },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

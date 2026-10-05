@@ -185,12 +185,17 @@
     "privacy": {
       "eyebrow": "Privacy",
       "title": "Privacy and data protection.",
-      "description": "The final privacy policy awaits management approval and a confirmed lead data retention period."
+      "description": "Learn what data is processed through the website, WhatsApp Request Proposal form, and DSO Web SFTP service."
     },
     "terms": {
       "eyebrow": "Terms",
       "title": "Website terms of use.",
-      "description": "The final terms of use will be added after legal review."
+      "description": "Terms for using the website, Request Proposal form, and PT Dux Stellae Orientis Web SFTP service."
+    },
+    "cookies": {
+      "eyebrow": "Cookies",
+      "title": "Cookie Policy.",
+      "description": "Information about language, Web SFTP login-session, and analytics cookies used by DSO services."
     },
     "notFound": {
       "eyebrow": "Page in progress",
@@ -228,6 +233,7 @@
     "office": "Jakarta & Bekasi",
     "copyright": "© 2026 PT Dux Stellae Orientis. All rights reserved.",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "cookies": "Cookie Policy"
   }
 }

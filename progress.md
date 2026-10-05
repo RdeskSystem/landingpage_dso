@@ -113,7 +113,7 @@ SHOW_INSIGHT=false
 - [x] Bangun detail Layanan dan empat template layanan dengan CMS fallback.
 - [x] Bangun Tentang, Tim, dan Kepatuhan dengan konten publik yang aman.
 - [x] Bangun Teknologi, Industri, dan Jangkauan.
-- [x] Bangun Kontak, Karier, Insight, Privasi, dan Syarat; konten dinamis tetap menunggu CMS/approval.
+- [x] Bangun halaman Kontak, Karier, Insight, dan legal bilingual; data lowongan/artikel tetap menunggu CMS/approval.
 - [x] Buat mockup aplikasi/dashboard dengan data dummy dan label `Ilustrasi`.
 - [x] Pastikan semua halaman tersedia untuk `id` dan `en`.
 
@@ -177,7 +177,8 @@ Jangan mengisi keputusan berikut dari asumsi. Gunakan placeholder dan flag sampa
 - [ ] Persetujuan publikasi foto, nama, dan bio anggota tim.
 - [ ] Tahun berdiri dan milestone perusahaan.
 - [ ] KPI/SLA yang boleh dipublikasikan.
-- [ ] Retensi data lead dan teks final Privasi/Syarat.
+- [x] Publikasikan Kebijakan Privasi, Syarat Penggunaan, dan Kebijakan Cookie bilingual sesuai alur WhatsApp, website, dan Web SFTP.
+- [ ] Konfirmasi jadwal retensi berkas SFTP sesuai kebutuhan proyek dan review legal manajemen.
 - [ ] Foto/video asli non-sensitif untuk hero dan halaman layanan.
 
 ## 9. Environment Baseline
