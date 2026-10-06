@@ -86,7 +86,7 @@ pm2 save
 nginx -t && systemctl reload nginx
 ```
 
-`PAYLOAD_REVALIDATE_SECRET` harus sama pada proses web dan CMS. CMS memakai `PAYLOAD_REVALIDATE_URL=http://127.0.0.1:3002/api/revalidate`; jangan mengirim secret melalui URL. Form Request Proposal membuka WhatsApp admin langsung dan tidak memerlukan SMTP atau Turnstile. `NEXT_PUBLIC_ANALYTICS_ID` berisi domain Plausible (opsional) dan perubahan nilainya memerlukan rebuild web. Simpan `.env` di server dengan permission `600`.
+`PAYLOAD_REVALIDATE_SECRET` harus sama pada proses web dan CMS. CMS memakai `PAYLOAD_REVALIDATE_URL=http://127.0.0.1:3002/api/revalidate`; jangan mengirim secret melalui URL. Form Request Proposal membuka WhatsApp admin langsung dan tidak memerlukan SMTP atau Turnstile. Email autentikasi/reset Payload dapat diaktifkan dengan `PAYLOAD_EMAIL_SMTP_*`; adapter ini tidak membuat mailbox. `NEXT_PUBLIC_ANALYTICS_ID` berisi domain Plausible (opsional) dan perubahan nilainya memerlukan rebuild web. Simpan `.env` di server dengan permission `600`.
 
 CMS dibangun dengan asset prefix `/cms-assets` agar chunk Next.js CMS tidak bertabrakan dengan chunk frontend. Pastikan snippet `deploy/nginx/cms-assets.conf` dimasukkan di dalam server block `web.duxorientis.com`; request `/admin` dan `/api/` harus diteruskan ke port CMS `3001`.
 

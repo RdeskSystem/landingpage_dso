@@ -126,7 +126,8 @@ SHOW_INSIGHT=false
 - [x] Tambahkan metadata, OG image, canonical, `hreflang`, sitemap dinamis, dan robots.
 - [x] Tambahkan webhook CMS terautentikasi untuk revalidate ISR; endpoint dan hook CMS sudah smoke-tested.
 - [x] Pastikan semua feature flag memiliki default aman.
-- [ ] Email adapter Payload untuk email reset password belum dikonfigurasi; form Request Proposal tidak memerlukan email.
+- [x] Siapkan Payload Nodemailer adapter bersyarat untuk email autentikasi/reset; aktivasi menunggu kredensial SMTP Mailspace. Form Request Proposal tetap melalui WhatsApp.
+- [ ] Mailbox untuk setiap pengguna harus dibuat/diaktifkan di penyedia email; CMS users bukan mailbox.
 
 ### Fase 4 - QA dan Launch
 
